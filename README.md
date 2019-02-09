@@ -21,3 +21,14 @@ Create Read Update and Delete framework using JS
 - [ ] Pagination and snippets of x number of characters for each story for viewing previous stories
 - [ ] Maybe story is on page but hidden and when user clicks submit the story fades in from the background
 - [ ] Automatically generate tags for stories and have a tag cloud so users can click to view stories with that tag
+- [ ] Maybe there is an API that can be used for pulling story templates?
+- [ ] Is there a way to generate input fields based on number of blanks in story?
+
+### Other app ideas
+
+- [ ] Project scoping app
+- [ ] Brainstorming app
+- [ ] Flashcard/studying app where you can create flashcards, save them, tag them, store in folders, etc. << leaning towards this idea as I think it will be easier to get done by Friday than Mad Libs project
+- [ ] Whiteboard app
+
+
