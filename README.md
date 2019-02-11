@@ -12,11 +12,11 @@ Create Read Update and Delete framework using JS
 - [ ] UI/UX considerations (how are we going to use this)
 
 ### Advanced Reqs
-- [ ] Flashcard app
-- [ ] Field for question and field for answer
-- [ ] Displays question when you click on saved flashcard, can click again to reveal answer
+- [ ] Code sharing app
+- [ ] Field for entering code
+- [ ] Ability to update, clear and delete saved code
 
 ### Would be nice to have features
-- [ ] Flashcard is stored and when you click on it the question is displayed along with a field for entering answer
-- [ ] Displays check mark if correct answer entered or incorrect if not
+- [ ] Ability to share links to individual code snippets
+- [ ] Ability to run code snippet in browser
 
