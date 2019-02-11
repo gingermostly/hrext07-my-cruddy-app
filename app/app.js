@@ -16,9 +16,9 @@ $(document).ready(function(){
     return unique;
   }; //Generate a random key for storing the code snippet
 
-  $('.btn-add').on('click', function(e){
+  $('.btn-save').on('click', function(e){
 
-    var codeData = $('.input-code').val().toString();
+    var codeData = $('.input-code').val();
     var valueData = $('.input-value').val();
     var keyData = key();
 
@@ -45,9 +45,7 @@ $(document).ready(function(){
   //   $('.container-data').text('');
   // });
   // // delete all?
-  // $('.btn-clear').click(function(){
-  //   localStorage.clear();
-  //   $('.container-data').text('');
-  // });
-
+  $('.btn-clear').click(function(){
+    $('.input-code').val('');
+  });
 });
