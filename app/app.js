@@ -30,7 +30,7 @@ $(document).ready(function(){
     // <div class="display-data-item" data-keyValue="keyData">valueData</div>
     // if you use backticks ` you can use ${templateLiterals}
     // TODO make this vars make sense across the app
-    $('.container-data').append('<div class="display-data-item" data-keyValue="'+ keyData +'">'+codeData+'</div>');
+    $('.container-data').append('<textarea class="save-data-item" data-keyValue="'+ keyData +'">'+codeData+'</textarea>');
     $('.input-code').val('');
   });
 
