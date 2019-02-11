@@ -18,7 +18,7 @@ $(document).ready(function(){
 
   $('.btn-add').on('click', function(e){
 
-    var codeData = $('.input-code').val();
+    var codeData = $('.input-code').val().toString();
     var valueData = $('.input-value').val();
     var keyData = key();
 
@@ -39,15 +39,15 @@ $(document).ready(function(){
     // need to expand when  more than 1 item is added
 
   // delete item
-  $('.container-data').on('click', '.display-data-item', function(e){
-    var keyData = e.currentTarget.dataset.keyvalue;
-    localStorage.removeItem(keyData);
-    $('.container-data').text('');
-  });
-  // delete all?
-  $('.btn-clear').click(function(){
-    localStorage.clear();
-    $('.container-data').text('');
-  });
+  // $('.container-data').on('click', '.display-data-item', function(e){
+  //   var keyData = e.currentTarget.dataset.keyvalue;
+  //   localStorage.removeItem(keyData);
+  //   $('.container-data').text('');
+  // });
+  // // delete all?
+  // $('.btn-clear').click(function(){
+  //   localStorage.clear();
+  //   $('.container-data').text('');
+  // });
 
 });
