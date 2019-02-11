@@ -12,23 +12,11 @@ Create Read Update and Delete framework using JS
 - [ ] UI/UX considerations (how are we going to use this)
 
 ### Advanced Reqs
-- [ ] Create Mad Libs app that allows users to fill in blanks and create story
-- [ ] Store database of stories so visitors can view previous stories
-- [ ] Ability to generate random words to fill in each blank if user would rather have computer generate automatically
-- [ ] Only display blanks and display story with the input words once all blank inputs have been filled in
-- [ ] User can delete word before submitting if they decide they want to enter a different word
-- [ ] Can click a button to display a random story that was previously submitted
-- [ ] Pagination and snippets of x number of characters for each story for viewing previous stories
-- [ ] Maybe story is on page but hidden and when user clicks submit the story fades in from the background
-- [ ] Automatically generate tags for stories and have a tag cloud so users can click to view stories with that tag
-- [ ] Maybe there is an API that can be used for pulling story templates?
-- [ ] Is there a way to generate input fields based on number of blanks in story?
+- [ ] Flashcard app
+- [ ] Field for question and field for answer
+- [ ] Displays question when you click on saved flashcard, can click again to reveal answer
 
-### Other app ideas
-
-- [ ] Project scoping app
-- [ ] Brainstorming app
-- [ ] Flashcard/studying app where you can create flashcards, save them, tag them, store in folders, etc. << leaning towards this idea as I think it will be easier to get done by Friday than Mad Libs project
-- [ ] Whiteboard app
-
+### Would be nice to have features
+- [ ] Flashcard is stored and when you click on it the question is displayed along with a field for entering answer
+- [ ] Displays check mark if correct answer entered or incorrect if not
 
