@@ -10,6 +10,13 @@ $(document).ready(function(){
   var alphabet = {0:'a', 1:'b', 2:'c', 3:'d', 4:'e', 5:'f', 6:'g', 7:'h', 8:'i', 9:'j', 10:'k', 11:'l', 12:'m', 13:'n', 14:'o', 15:'p', 16:'q', 17:'r', 18:'s', 19:'t', 20:'u', 21:'v', 22:'w', 23:'x', 24:'y'
 , 25:'z'};
   var letter = _.random(25); //alphabet array and letter variable used for getting random letters when generating a random, unique key for each new snippet
+  var dataKeys = Object.keys(localStorage);
+
+  if(dataKeys){
+    dataKeys.forEach(key =>{
+      $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea>`);
+    });
+  };
 
   var key = function(){
     var unique = alphabet[letter] + alphabet[letter] + _.random(300) + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter] + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter];
@@ -23,14 +30,8 @@ $(document).ready(function(){
     var keyData = key();
 
     localStorage.setItem(keyData, codeData);
-    // read from db
-    var displayText = keyData + ' | ' + localStorage.getItem(keyData);
-    // this only displays the last one? might want to switch to html
-    // and append a div
-    // <div class="display-data-item" data-keyValue="keyData">valueData</div>
-    // if you use backticks ` you can use ${templateLiterals}
     // TODO make this vars make sense across the app
-    $('.container-data').append('<textarea class="save-data-item" data-keyValue="'+ keyData +'">'+codeData+'</textarea>');
+    $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea>`);
     $('.input-code').val('');
   });
 
