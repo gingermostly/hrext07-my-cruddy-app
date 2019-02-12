@@ -1,4 +1,20 @@
+h1 {
+  text-align: center;
+}
+.container-main {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container {
+  margin-bottom: 20px;
+}
+
 .input-code {
 	height: 200px;
 	width: 600px;
+}
+
+.save-data-item {
+  display: block;
 }
