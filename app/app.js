@@ -14,7 +14,7 @@ $(document).ready(function(){
 
   if(dataKeys){
     dataKeys.forEach(key =>{
-      $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea>`);
+      $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button>`);
     });
   };
 
@@ -24,18 +24,22 @@ $(document).ready(function(){
   }; //Generate a random key for storing the code snippet
 
   $('.btn-save').on('click', function(e){
-
     var codeData = $('.input-code').val();
-    var valueData = $('.input-value').val();
     var keyData = key();
 
     localStorage.setItem(keyData, codeData);
     // TODO make this vars make sense across the app
-    $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea>`);
+    $('.container-data').append(`<textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button>`);
     $('.input-code').val('');
   });
 
-
+$('.btn-delete').on('click', function(){
+    var itemKey = this.previousElementSibling.dataset.keyvalue;
+    localStorage.removeItem(itemKey);
+      this.previousElementSibling.remove();
+      this.nextSibling.remove();
+      this.remove();
+});
   // update db
     // need to expand when  more than 1 item is added
 
