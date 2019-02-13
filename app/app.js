@@ -14,12 +14,15 @@ $(document).ready(function(){
 
   if(dataKeys){
     dataKeys.forEach(key =>{
-      $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
+      var title = key.split(' ');
+         $('.container-data').append(`<a data-keyValue="${key}" href="#">${title.slice(1).join(' ')}</a>`);
+
+    //   $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
     });
   };
 
   var key = function(){
-    var unique = alphabet[letter] + alphabet[letter] + _.random(300) + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter] + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter];
+    var unique = alphabet[letter] + alphabet[letter] + _.random(300) + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter] + alphabet[letter].toUpperCase() + _.random(300) + alphabet[letter] + ' ' + $('.input-title').val();
     return unique;
   }; //Generate a random key for storing the code snippet
 
@@ -30,24 +33,28 @@ $(document).ready(function(){
   $('.btn-save').click(function(){
     var codeData = $('.input-code').val();
     var keyData = key();
+    var titleData = $('.input-title').val();
 
     localStorage.setItem(keyData, codeData);
-    $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
+    $('.container-data').append(`<a data-keyValue="${keyData}" href="#">${titleData}</a>`);
+
+    // $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
     $('.input-code').val('');
+    $('.input-title').val('');
   });
 
-  $('.container-data').on('click', function(e){
-    if($(e.target).hasClass('btn-delete')){
-      var itemKey = e.target.closest('.data-wrapper').querySelector('.save-data-item').dataset.keyvalue;
-      localStorage.removeItem(itemKey);
-      e.target.closest('.data-wrapper').remove();
-    }
-  });
-  $('.container-data').on('click', function(e){
-    if($(e.target).hasClass('btn-update')){
-      var itemKey = e.target.closest('.data-wrapper').querySelector('.save-data-item').dataset.keyvalue;
-      var itemData = e.target.closest('.data-wrapper').querySelector('.save-data-item').value;
-      localStorage.setItem(itemKey, itemData)
-    }
-  });
+  // $('.container-data').on('click', function(e){
+  //   if($(e.target).hasClass('btn-delete')){
+  //     var itemKey = e.target.closest('.data-wrapper').querySelector('.save-data-item').dataset.keyvalue;
+  //     localStorage.removeItem(itemKey);
+  //     e.target.closest('.data-wrapper').remove();
+  //   }
+  // });
+  // $('.container-data').on('click', function(e){
+  //   if($(e.target).hasClass('btn-update')){
+  //     var itemKey = e.target.closest('.data-wrapper').querySelector('.save-data-item').dataset.keyvalue;
+  //     var itemData = e.target.closest('.data-wrapper').querySelector('.save-data-item').value;
+  //     localStorage.setItem(itemKey, itemData)
+  //   }
+  // });
 });
