@@ -15,7 +15,7 @@ $(document).ready(function(){
   if(dataKeys){
     dataKeys.forEach(key =>{
       var title = key.split(' ');
-         $('.container-data').append(`<a data-keyValue="${key}" href="#">${title.slice(1).join(' ')}</a>`);
+         $('.container-data').append(`<a class="data-link"data-id="${title.slice(1).join(' ')}" data-keyValue="${key}" href="#">${title.slice(1).join(' ')}</a>`);
 
     //   $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
     });
@@ -36,11 +36,16 @@ $(document).ready(function(){
     var titleData = $('.input-title').val();
 
     localStorage.setItem(keyData, codeData);
-    $('.container-data').append(`<a data-keyValue="${keyData}" href="#">${titleData}</a>`);
+    $('.container-data').append(`<a class="data-link" data-id="${titleData}" data-keyValue="${keyData}">${titleData}</a>`);
 
     // $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
     $('.input-code').val('');
     $('.input-title').val('');
+  });
+
+  $('.data-link').on('click', function(){
+    $('.input-code').val(`${localStorage[this.dataset.keyvalue]}`);
+    $('.input-title').val(this.dataset.id);
   });
 
   // $('.container-data').on('click', function(e){
