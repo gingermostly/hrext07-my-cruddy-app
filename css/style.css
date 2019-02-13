@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+  background-color: #000;
+  height: 100vh;
+  width: 100vh;
+  padding: 0px;
+  margin: 0px auto;
+}
+
 h1 {
   text-align: center;
 }
 .container-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
+.input-title {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
 .btn-container {
   margin-bottom: 20px;
 }
@@ -13,8 +28,18 @@ h1 {
 .input-code {
 	height: 200px;
 	width: 600px;
+  font-family: 'Press Start 2P', cursive;
+  resize: none;
 }
 
 .save-data-item {
   display: block;
+  height: 180px;
+  width: 180px;
+  font-family: 'Press Start 2P', cursive;
+  resize: none;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
 }
