@@ -29,6 +29,8 @@ $(document).ready(function(){
   $('.btn-clear').click(function(){
     $('.input-code').val('');
     $('.input-title').val('');
+      $('.btn-update').remove();
+      $('.btn-save').show();
   });
 
   $('.btn-save').click(function(){
@@ -36,22 +38,41 @@ $(document).ready(function(){
     var keyData = key();
     var titleData = $('.input-title').val();
 
-    localStorage.setItem(keyData, codeData);
-    $('.container-data').append(`<li><a class="code-link" data-keyValue="${keyData}" href="#">${titleData}</a></li>`);
-
-    // $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${keyData}">${codeData}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
-    $('.input-code').val('');
-    $('.input-title').val('');
+    if(titleData !== '' && codeData !== ''){
+      localStorage.setItem(keyData, codeData);
+      $('.container-data').append(`<li><a class="code-link" data-keyValue="${keyData}" href="#">${titleData}</a></li>`);
+      $('.input-code').val('');
+      $('.input-title').val('');
+    }
+    else if(titleData === ''){
+      alert('PLEASE ENTER A TITLE!')
+    }
+    else if(codeData === ''){
+      alert('PLEASE ENTER SOME CODE FIRST!')
+    }
   });
 
 $('.container-data').on('click', function(e){
    $('.input-code').val(`${localStorage[e.target.dataset.keyvalue]}`);
    $('.input-title').val(e.target.text);
-})
-// $('.code-link').on('click', function(){
-//   $('.input-code').val(`${localStorage[this.dataset.keyvalue]}`);
-//   $('.input-title').val(this.text);
-// });
+   $('.btn-save').hide();
+   $('.btn-update').remove();
+   $('.btn-container').prepend('<button class="btn-update">UPDATE CODE</button>');
+   $('.btn-update').on('click', function(){
+    e.target.text = $('.input-title').val();
+    var oldKey = e.target.dataset.keyvalue;
+    var newKey = key();
+    var newCode = $('.input-code').val();
+    localStorage[newKey] = newCode;
+    localStorage.removeItem(oldKey);
+    e.target.dataset.keyvalue = newKey;
+    $('.btn-update').remove();
+    $('.btn-save').show();
+    $('.input-code').val('');
+    $('.input-title').val('');
+   });
+});
+
 
   // $('.container-data').on('click', function(e){
   //   if($(e.target).hasClass('btn-delete')){

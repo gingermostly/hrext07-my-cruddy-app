@@ -32,14 +32,6 @@ h1 {
   resize: none;
 }
 
-.save-data-item {
-  display: block;
-  height: 180px;
-  width: 180px;
-  font-family: 'Press Start 2P', cursive;
-  resize: none;
-}
-
 button {
   font-family: 'Press Start 2P', cursive;
 }
