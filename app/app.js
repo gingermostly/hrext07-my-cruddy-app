@@ -9,7 +9,7 @@ $(document).ready(function(){
   if(dataKeys){
     dataKeys.forEach(key =>{
       var title = key.split(' ');
-         $('.container-data').append(`<li><a class="code-link" data-keyValue="${key}" href="#">${title.slice(1).join(' ')}</a></li>`);
+         $('.container-data').append(`<li><a class="code-link" data-keyValue="${key}" href="#">${title.slice(1).join(' ')} <button class="delete">X</button></a></li>`);
 
     //   $('.container-data').append(`<div class='data-wrapper'><textarea class="save-data-item" data-keyValue="${key}">${localStorage[key]}</textarea><button class="btn-delete">DELETE</button><button class="btn-update">UPDATE</button></div>`);
     });
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     if(titleData !== '' && codeData !== ''){
       localStorage.setItem(keyData, codeData);
-      $('.container-data').append(`<li><a class="code-link" data-keyValue="${keyData}" href="#">${titleData}</a></li>`);
+      $('.container-data').append(`<li><a class="code-link" data-keyValue="${keyData}" href="#">${titleData} <button class="delete">X</button></a></li>`);
       $('.input-code').val('');
       $('.input-title').val('');
     }
@@ -47,8 +47,9 @@ $(document).ready(function(){
   });
 
 $('.container-data').on('click', function(e){
+  if($(e.target).hasClass('code-link')){
    $('.input-code').val(`${localStorage[e.target.dataset.keyvalue]}`);
-   $('.input-title').val(e.target.text);
+   $('.input-title').val(e.target.text.slice(0, e.target.text.length-1));
    $('.btn-save').hide();
    $('.btn-update').remove();
    $('.btn-container').prepend('<button class="btn-update">UPDATE CODE</button>');
@@ -65,7 +66,29 @@ $('.container-data').on('click', function(e){
     $('.input-code').val('');
     $('.input-title').val('');
    });
+ } else if ($(e.target).hasClass('delete')){
+    var key = $(e.target).parent().attr('data-keyValue');
+    localStorage.removeItem(key);
+    $(e.target).closest('li').remove();
+    $('.input-code').val('');
+    $('.input-title').val('');
+    $('.btn-update').remove();
+    $('.btn-save').show();
+ }
 });
+
+// $('.code-link').mouseenter(function(){
+//   var removeDelete = this.text;
+//   $(this).append(`<a class="delete" data-key="${this.dataset.keyvalue}"href=#>X</a>`);
+//   $('.delete').on('click', function(){
+//     localStorage.removeItem(this.dataset.key);
+//     $(this).parent().remove();
+//   });
+//   $('.code-link').mouseleave(function(){
+//     $(this).text(removeDelete);
+//   });
+// });
+
 
 
   // $('.container-data').on('click', function(e){
