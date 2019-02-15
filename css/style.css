@@ -74,8 +74,16 @@ button, a {
   font-family: 'Press Start 2P', cursive;
 }
 
+button {
+  background: transparent;
+  color: yellow;
+  padding: 10px;
+  margin-right: 15px;
+  border: 3px dashed red;
+}
+
 a {
-  color: rgb(247, 50, 3);
+  color: red;
   text-decoration: none;
 }
 
