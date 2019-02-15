@@ -86,6 +86,12 @@ button {
   border: 3px dashed red;
 }
 
+.btn-update:hover, .btn-save:hover, .btn-clear:hover {
+  background: blue;
+  color: red;
+  border: 3px dashed yellow;
+}
+
 a {
   color: red;
   text-decoration: none;
@@ -94,6 +100,11 @@ a {
 input:focus, textarea {
   outline: none;
   caret-color: rgb(247, 50, 3);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
