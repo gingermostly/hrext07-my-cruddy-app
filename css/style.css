@@ -14,7 +14,7 @@ h1 {
   color: yellow;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
-  text-shadow: 4px 2px 0px rgb(247, 50, 3), -1px 3px 0px rgb(20, 58, 236);
+  text-shadow: 4px 2px 0px red, -1px 3px 0px blue;
   animation: blinking 1.5s cubic-bezier(0.12, 0.72, 0.12, 0.9) infinite;
 }
 
