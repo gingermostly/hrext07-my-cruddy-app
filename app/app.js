@@ -67,8 +67,8 @@ $('.container-data').on('click', function(e){
     $('.input-title').val('');
    });
  } else if ($(e.target).hasClass('delete')){
-    var key = $(e.target).parent().attr('data-keyValue');
-    localStorage.removeItem(key);
+    var keyDelete = $(e.target).parent().attr('data-keyValue');
+    localStorage.removeItem(keyDelete);
     $(e.target).closest('li').remove();
     $('.input-code').val('');
     $('.input-title').val('');

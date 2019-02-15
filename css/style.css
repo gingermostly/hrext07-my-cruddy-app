@@ -10,7 +10,7 @@ body {
 
 h1 {
   padding-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   color: yellow;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
@@ -32,6 +32,337 @@ h1 {
   }
 }
 
+.open {
+  background: yellow;
+  transform: scale(0.6);
+  width: 10px;
+  height: 10px;
+  box-shadow:
+   10px 0px  yellow,
+    -10px 0px yellow,
+     -20px 0px yellow,
+    -30px 10px yellow,
+    -40px 10px yellow,
+    -20px 10px yellow,
+    -10px 10px yellow,
+    0px 10px yellow,
+    10px 10px yellow,
+    20px 10px yellow,
+    30px 10px yellow,
+    40px 20px yellow,
+    30px 20px yellow,
+    20px 20px yellow,
+    10px 20px yellow,
+    0px 20px yellow,
+    -10px 20px yellow,
+    -20px 20px yellow,
+    -30px 20px yellow,
+    -40px 20px yellow,
+    -50px 20px yellow,
+    -50px 30px yellow,
+    -40px 30px yellow,
+    -30px 30px yellow,
+    -20px 30px yellow,
+    -10px 30px yellow,
+    0px 30px yellow,
+    10px 30px yellow,
+    20px 30px yellow,
+    30px 30px yellow,
+    40px 30px yellow,
+    20px 40px yellow,
+    10px 40px yellow,
+    0px 40px yellow,
+    -10px 40px yellow,
+    -20px 40px yellow,
+    -30px 40px yellow,
+    -40px 40px yellow,
+    -50px 40px yellow,
+    -60px 40px yellow,
+    -60px 50px yellow,
+    -50px 50px yellow,
+    -40px 50px yellow,
+    -30px 50px yellow,
+    -20px 50px yellow,
+    -10px 50px yellow,
+    -30px 60px yellow,
+    -40px 60px yellow,
+    -50px 60px yellow,
+    -60px 60px yellow,
+    -60px 70px yellow,
+    -50px 70px yellow,
+    -40px 70px yellow,
+    -30px 70px yellow,
+    -20px 70px yellow,
+    -10px 70px yellow,
+    20px 80px yellow,
+    10px 80px yellow,
+    0px 80px yellow,
+    -10px 80px yellow,
+    -20px 80px yellow,
+    -30px 80px yellow,
+    -40px 80px yellow,
+    -50px 80px yellow,
+    -60px 80px yellow,
+    -50px 90px yellow,
+    -40px 90px yellow,
+    -30px 90px yellow,
+    -20px 90px yellow,
+    -10px 90px yellow,
+    0px 90px yellow,
+    10px 90px yellow,
+    20px 90px yellow,
+    30px 90px yellow,
+    40px 90px yellow,
+    40px 100px yellow,
+    30px 100px yellow,
+    20px 100px yellow,
+    10px 100px yellow,
+    0px 100px yellow,
+    -10px 100px yellow,
+    -20px 100px yellow,
+    -30px 100px yellow,
+    -40px 100px yellow,
+    -50px 100px yellow,
+    -40px 110px yellow,
+    -30px 110px yellow,
+    -20px 110px yellow,
+    -10px 110px yellow,
+    0px 110px yellow,
+    10px 110px yellow,
+    20px 110px yellow,
+    30px 110px yellow,
+    10px 120px yellow,
+    0px 120px yellow,
+    -10px 120px yellow,
+    -20px 120px yellow;
+}
+
+.closed {
+  background: yellow;
+  position: absolute;
+  transform: scale(0.6);
+  animation: eat 0.8s steps(1, start) infinite;
+  width: 10px;
+  height: 10px;
+  box-shadow:
+   10px 0px  yellow,
+    -10px 0px yellow,
+     -20px 0px yellow,
+    -30px 10px yellow,
+    -40px 10px yellow,
+    -20px 10px yellow,
+    -10px 10px yellow,
+    0px 10px yellow,
+    10px 10px yellow,
+    20px 10px yellow,
+    30px 10px yellow,
+    40px 20px yellow,
+    30px 20px yellow,
+    20px 20px yellow,
+    10px 20px yellow,
+    0px 20px yellow,
+    -10px 20px yellow,
+    -20px 20px yellow,
+    -30px 20px yellow,
+    -40px 20px yellow,
+    -50px 20px yellow,
+    -50px 30px yellow,
+    -40px 30px yellow,
+    -30px 30px yellow,
+    -20px 30px yellow,
+    -10px 30px yellow,
+    0px 30px yellow,
+    10px 30px yellow,
+    20px 30px yellow,
+    30px 30px yellow,
+    40px 30px yellow,
+    50px 40px yellow,
+    40px 40px yellow,
+    30px 40px yellow,
+    20px 40px yellow,
+    10px 40px yellow,
+    0px 40px yellow,
+    -10px 40px yellow,
+    -20px 40px yellow,
+    -30px 40px yellow,
+    -40px 40px yellow,
+    -50px 40px yellow,
+    -60px 40px yellow,
+    -60px 50px yellow,
+    -50px 50px yellow,
+    -40px 50px yellow,
+    -30px 50px yellow,
+    -20px 50px yellow,
+    -10px 50px yellow,
+    0px 50px yellow,
+    10px 50px yellow,
+    20px 50px yellow,
+    30px 50px yellow,
+    40px 50px yellow,
+    50px 50px yellow,
+    -30px 60px yellow,
+    -40px 60px yellow,
+    -50px 60px yellow,
+    -60px 60px yellow,
+    -60px 70px yellow,
+    -50px 70px yellow,
+    -40px 70px yellow,
+    -30px 70px yellow,
+    -20px 70px yellow,
+    -10px 70px yellow,
+    0px 70px yellow,
+    10px 70px yellow,
+    20px 70px yellow,
+    30px 70px yellow,
+    40px 70px yellow,
+    50px 70px yellow,
+    50px 80px yellow,
+    40px 80px yellow,
+    30px 80px yellow,
+    20px 80px yellow,
+    10px 80px yellow,
+    0px 80px yellow,
+    -10px 80px yellow,
+    -20px 80px yellow,
+    -30px 80px yellow,
+    -40px 80px yellow,
+    -50px 80px yellow,
+    -60px 80px yellow,
+    -50px 90px yellow,
+    -40px 90px yellow,
+    -30px 90px yellow,
+    -20px 90px yellow,
+    -10px 90px yellow,
+    0px 90px yellow,
+    10px 90px yellow,
+    20px 90px yellow,
+    30px 90px yellow,
+    40px 90px yellow,
+    40px 100px yellow,
+    30px 100px yellow,
+    20px 100px yellow,
+    10px 100px yellow,
+    0px 100px yellow,
+    -10px 100px yellow,
+    -20px 100px yellow,
+    -30px 100px yellow,
+    -40px 100px yellow,
+    -50px 100px yellow,
+    -40px 110px yellow,
+    -30px 110px yellow,
+    -20px 110px yellow,
+    -10px 110px yellow,
+    0px 110px yellow,
+    10px 110px yellow,
+    20px 110px yellow,
+    30px 110px yellow,
+    10px 120px yellow,
+    0px 120px yellow,
+    -10px 120px yellow,
+    -20px 120px yellow;
+}
+
+.food {
+  height: 10px;
+  width: 10px;
+  background: transparent;
+  z-index: -1;
+  position: absolute;
+  transform: scale(0.6);
+  animation: feed 0.8s linear 0s infinite;
+  box-shadow: 80px 60px white,
+    90px 60px white,
+    90px 50px white,
+    80px 50px white,
+    150px 50px white,
+    160px 50px white,
+    160px 60px white,
+    150px 60px white,
+    220px 50px white,
+    220px 60px white,
+    230px 60px white,
+    230px 50px white,
+    290px 50px white,
+    300px 50px white,
+    290px 60px white,
+    300px 60px white,
+    360px 60px white,
+    370px 60px white,
+    370px 50px white,
+    360px 50px white,
+    430px 60px white,
+    430px 50px white,
+    440px 60px white,
+    440px 50px white,
+    500px 60px white,
+    500px 50px white,
+    510px 50px white,
+    510px 60px white,
+    570px 60px white,
+    580px 60px white,
+    580px 50px white,
+    570px 50px white,
+    640px 50px white,
+    650px 50px white,
+    650px 60px white,
+    640px 60px white,
+    710px 60px white,
+    710px 50px white,
+    720px 50px white,
+    720px 60px white,
+    780px 60px white,
+    790px 60px white,
+    780px 50px white,
+    790px 50px white,
+    850px 50px white,
+    860px 50px white,
+    850px 60px white,
+    860px 60px white,
+    920px 60px white,
+    930px 60px white,
+    920px 50px white,
+    930px 50px white,
+    990px 60px white,
+    1000px 60px white,
+    990px 50px white,
+    1000px 50px white,
+    1060px 60px white,
+    1070px 60px white,
+    1060px 50px white,
+    1070px 50px white,
+    1130px 60px white,
+    1140px 60px white,
+    1130px 50px white,
+    1140px 50px white,
+    1200px 60px white,
+    1210px 60px white,
+    1200px 50px white,
+    1210px 50px white
+    ;
+}
+
+@keyframes feed {
+  0% {
+   transform: translateX(0) scale(0.6);
+ }
+ 100% {
+   transform: translateX(-42px) scale(0.6);
+ }
+}
+
+@keyframes eat {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+
+  98% {
+    opacity: 1;
+  }
+}
+
 .container-main {
   display: flex;
   flex-direction: column;
@@ -39,6 +370,7 @@ h1 {
 
 .input-title {
   font-family: 'Press Start 2P', cursive;
+  margin-top: 80px;
   margin-bottom: 20px;
   max-width: 300px;
   background: repeating-linear-gradient(#dcd1d1, #f9f9f9 2px);
